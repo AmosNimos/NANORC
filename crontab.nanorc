@@ -1,0 +1,15 @@
+# This is a nano highlight sheet for the crontab file.
+# Copy and paste this into your nano configuration file.
+
+syntax "Crontab" "/(tmp\\/crontab\\.\\w+|\\/crontab)$"
+color brightgreen "^\\s*#.*$"       # Matches comments
+color yellow "^[^\\s]+\\s+"        # Matches time specification
+color cyan "\\S+$"                 # Matches command or script
+color brightmagenta "\\@(reboot|yearly|annually|monthly|weekly|daily|midnight|hourly)\\b"   # Matches predefined schedules
+color white,black "\\&\\&"         # Matches the '&&' operator
+
+# Optional: Uncomment the following lines to add more specific color highlighting
+#color brightcyan "\\b\\d+\\b"    # Matches numeric values
+#color brightyellow "\\b\\w+\\b"  # Matches alphanumeric strings
+
+# Save the file and restart nano to apply the changes.
